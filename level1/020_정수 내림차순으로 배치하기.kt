@@ -2,27 +2,27 @@
 // 함수 solution은 정수 n을 매개변수로 입력받습니다. n의 각 자릿수를 큰것부터 작은 순으로 정렬한 새로운 정수를 리턴해주세요. 예를들어 n이 118372면 873211을 리턴하면 됩니다.
 
 // 내 첫번째 풀이
-class Solution {
-    fun solution(n: Long): Long {
-        var mylist = mutableListOf<Long>()
-        var tmp = n
-        var mystr = ""
+// class Solution {
+//     fun solution(n: Long): Long {
+//         var mylist = mutableListOf<Long>()
+//         var tmp = n
+//         var mystr = ""
 
-        while(tmp>0){
-            mylist.add(tmp%10)
-            tmp /= 10
-        }
-        mylist.sort()
-        mylist.reverse()
+//         while(tmp>0){
+//             mylist.add(tmp%10)
+//             tmp /= 10
+//         }
+//         mylist.sort()
+//         mylist.reverse()
 
-        for(i in mylist){
-            mystr += i.toString()
-        }
-        return mystr.toLong()
-    }
-}
+//         for(i in mylist){
+//             mystr += i.toString()
+//         }
+//         return mystr.toLong()
+//     }
+// }
 
-// 다른 풀이
+// 수정한 풀이
 class Solution {
     fun solution(n: Long): Long {
         var str = n.toString() //스트링으로 변환

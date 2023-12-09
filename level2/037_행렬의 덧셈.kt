@@ -3,11 +3,11 @@
 
 class Solution {
     fun solution(arr1: Array<IntArray>, arr2: Array<IntArray>): Array<IntArray> {
-        val answer = Array(arr1.size,{IntArray(arr1[0].size,{0})})
+        val answer = Array(arr1.size,{IntArray(arr1[0].size,{0})}) //arr1과 같은 크기를 가진 2차원 배열 선언, 모든 값은 0
         
-        for((idx1,firstData) in arr1.withIndex()){
-            for((idx2, data) in firstData.withIndex()){
-                answer[idx1][idx2] = data+arr2[idx1][idx2]
+        for(idx1,firstData) in arr1.withIndex()){ //arr1의 첫번째 차원
+            for((idx2, data) in firstData.withIndex()){ //arr2의 두번째 차원
+                answer[idx1][idx2] = data+arr2[idx1][idx2] // 두 배열의 합을 answer에 저장
             }
         }
         

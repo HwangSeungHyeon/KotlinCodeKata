@@ -10,7 +10,7 @@ class Solution {
         
         //앞뒤 반전된 3진법 결과가 intList에 저장됨
         while(tmpN>0){
-            intList.add((tmpN%3))   //3으로 나눈 나머지를 str에 더함
+            intList.add((tmpN%3))   //3으로 나눈 나머지를 리스트에 더함
             tmpN /= 3
         }
         

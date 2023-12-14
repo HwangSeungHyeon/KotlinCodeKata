@@ -2,7 +2,5 @@
 // 정수 num1과 num2가 주어질 때, num1에서 num2를 뺀 값을 return하도록 soltuion 함수를 완성해주세요.
 
 class Solution {
-    fun solution(num1: Int, num2: Int): Int {
-        return num1-num2
-    }
+    fun solution(num1: Int, num2: Int) = num1-num2
 }

@@ -8,11 +8,10 @@ class Solution {
         var strLenHalf = strLen/2
         
         if(strLen%2==0){ // 단어 길이가 짝수일 경우
-            println("문자열 길이: ${strLen}")
-            answer = s[strLenHalf-1].toString() + s[strLenHalf]
+            answer += s[strLenHalf-1].toString() + s[strLenHalf]
         }
         else{ //단어 길이가 홀수일 경우
-            answer = s[strLenHalf].toString()
+            answer += s[strLenHalf].toString()
         }
         
         return answer

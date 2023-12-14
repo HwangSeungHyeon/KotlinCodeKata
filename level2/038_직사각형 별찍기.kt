@@ -6,8 +6,8 @@
 fun main(args: Array<String>) {
     val (a, b) = readLine()!!.split(' ').map(String::toInt) //a와 b를 한줄로 입력받으면 공백을 기준으로 나눈 후, 
     
-    for(idx1 in 0..b-1){ // 세로에 찍을 별의 개수
-        for(idx2 in 0..a-1){ //가로에 찍을 별의 개수
+    for(idx1 in 0 until b){ // 세로에 찍을 별의 개수
+        for(idx2 in 0 until a){ //가로에 찍을 별의 개수
             print('*')
         }
         println()

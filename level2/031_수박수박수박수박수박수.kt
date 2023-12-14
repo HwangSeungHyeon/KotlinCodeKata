@@ -4,7 +4,7 @@
 class Solution {
     fun solution(n: Int): String {
         var answer = ""
-        for(i in 0..n-1){
+        for(i in 0 until n){
             if(i%2 == 0) { // 짝수일 경우
                 answer += "수"
             }

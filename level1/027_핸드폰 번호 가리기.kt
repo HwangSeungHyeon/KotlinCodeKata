@@ -3,8 +3,5 @@
 // 전화번호가 문자열 phone_number로 주어졌을 때, 전화번호의 뒷 4자리를 제외한 나머지 숫자를 전부 *으로 가린 문자열을 리턴하는 함수, solution을 완성해주세요.
 
 class Solution {
-    fun solution(phone_number: String): String {
-        var lastIndex = phone_number.lastIndex //마지막 인덱스
-        return "*".repeat(lastIndex-3) + phone_number.substring(lastIndex-3 .. lastIndex)
-    }
+    fun solution(phone_number: String) = phone_number?.let {"*".repeat(it.lastIndex-3) + it.substring(it.lastIndex-3)}
 }

@@ -4,11 +4,11 @@
 
 class Solution {
     fun solution(x: Int, n: Int): LongArray {
-        var answer = mutableListOf<Long>() //먼저 수정 가능한 Long 타입 배열 선언
+        var answer = mutableListOf<Long>() //먼저 수정 가능한 Long 타입 리스트 선언
 
         for(i in 1..n){
             answer.add(x.toLong()*i) //Long 타입 배열에 넣기 위해 x를 Long으로 변경
         }
-        return answer.toLongArray() //mutableList에서 ImmutableList로 변경한다.
+        return answer.toLongArray() //수정가능한 리스트에서 수정 불가능한 배열로 변경한다.
     }
 }

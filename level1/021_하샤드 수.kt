@@ -13,7 +13,7 @@ class Solution {
             sum += tmp%10
             tmp /= 10
         }
-        if(x%sum!=0){
+        if(x%sum!=0){  //x가 자릿수의 합이 아닐 경우만 answer를 변경
             answer = false
         }
         return answer

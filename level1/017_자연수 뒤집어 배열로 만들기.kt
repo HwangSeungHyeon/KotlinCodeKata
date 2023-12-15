@@ -3,12 +3,12 @@
 
 class Solution {
     fun solution(n: Long): LongArray {
-        var tmp = n
-        var answer = mutableListOf<Long>()   
-        
-        while(tmp > 0){
-            answer.add(tmp%10)
-            tmp = tmp / 10
+        var tmp = n //n은 수정할 수 없는 변수이므로 따로 선언
+        var answer = mutableListOf<Long>()   //  수정 가능한 리스트
+
+        while(tmp > 0){ //n의 1의 자리까지 구하기 위해서 반복문 사용
+            answer.add(tmp%10) //리스트에 10으로 나눈 나머지를 추가
+            tmp = tmp / 10 //tmp에 들어있는 값을 10으로 나눠줌
         }
         return answer.toLongArray()
     }

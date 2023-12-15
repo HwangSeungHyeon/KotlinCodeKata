@@ -4,7 +4,7 @@
 
 class Solution {
     fun solution(arr: IntArray, divisor: Int): IntArray {
-        var myArr = mutableListOf<Int>() //수정 가능한 Int형 배열
+        var myArr = mutableListOf<Int>() //수정 가능한 Int형 리스트
 
         for(i in arr){
             if(i%divisor == 0){

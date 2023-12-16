@@ -3,21 +3,13 @@
 
 class Solution {
     fun solution(arr: IntArray): IntArray {
-        var answer = ArrayList<Int>()
-        var minimum = 0
+        var minimum = arr.minOf{it}
+        var answer = arr.filterNot{ it == minimum }.toIntArray()
         
-        if(arr.size == 1){
-            answer.add(-1)
-        }
-        else{
-            minimum = arr.minOf{it}
-            for(num in arr){
-                if(num != minimum){
-                    answer.add(num)
-                }
-            }
+        if(answer.size == 0){
+            answer += -1
         }
 
-        return answer.toIntArray()
+        return answer
     }
 }

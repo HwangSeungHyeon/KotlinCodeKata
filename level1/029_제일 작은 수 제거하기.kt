@@ -13,3 +13,12 @@ class Solution {
         return answer
     }
 }
+
+// 특정 케이스에서 매우 느린 방법
+// class Solution {
+// 	// arr은 val 변수이기 때문에 값을 추가할 수 없다.
+//     // fun solution(arr: IntArray) = if(arr.size == 0) arr+=-1 else arr.filterNot{ it == minOf{it} }.toIntArray()
+    
+//     // 그러므로 새로운 배열을 만들어서 반환한다.
+//     fun solution(arr: IntArray) = if(arr.size == 1) intArrayOf(-1) else arr.filterNot{ it == arr.minOf{it} }.toIntArray()
+// }

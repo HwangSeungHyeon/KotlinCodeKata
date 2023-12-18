@@ -13,17 +13,15 @@ class Solution {
         for(s in score){
             if(tmp.size < k){ //명예의 전당에 있는 점수가 k개보다 작으면
                 tmp.add(s) //바로 넣음
-                tmp.sort() //오름차순으로 정렬함
-                answer += tmp[0] //최하위 점수 발표
             }
             else{ //명예의 전당에 있는 점수가 k개보다 같거나 크면
                 if(s >= tmp[0]){ //명예의 전당에 넣으려면 최소값보다 같거나 커야됨
                     tmp.removeAt(0) //기존 최소값 제거
                     tmp.add(s) //명예의 전당에 값을 넣고
-                    tmp.sort() //오름차순으로 정렬함
                 }
-                answer += tmp[0] //최하위 점수 발표
             }
+            tmp.sort() //오름차순으로 정렬함
+            answer += tmp[0] //최하위 점수 발표
         }
         return answer
     }

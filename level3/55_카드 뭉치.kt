@@ -13,16 +13,16 @@ class Solution {
     fun solution(cards1: Array<String>, cards2: Array<String>, goal: Array<String>): String {
         var cards1List = cards1.toCollection(ArrayList<String>()) //arrayList로 변환
         var cards2List = cards2.toCollection(ArrayList<String>()) //arrayList로 변환
-        var tmpStr = ArrayList<String>() // 문자열 저장할 배열
+        var tmpStr = ArrayList<String>() // 문자열 저장할 리스트
         
         for(g in goal){
             if(!cards1List.isEmpty() && g == cards1List.first()){ //cards1 리스트의 첫번째 요소가 goal의 요소랑 같으면
-                tmpStr.add(cards1List.first()) //배열에 추가함
+                tmpStr.add(cards1List.first()) //리스트에 추가함
                 cards1List.removeAt(0) //cards1에서 제거함
             }
             
             else if(!cards2List.isEmpty() && g == cards2List.first()){ //cards2 리스트의 첫번째 요소가 goal의 요소랑 같으면
-                tmpStr.add(cards2List.first()) //배열에 추가함
+                tmpStr.add(cards2List.first()) //리스트에 추가함
                 cards2List.removeAt(0) //cards2에서 제거함
             } 
         }

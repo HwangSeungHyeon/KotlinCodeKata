@@ -24,7 +24,7 @@ class Solution {
         while(boxSize >= m){
             var tmp = score.slice(boxSize-m until boxSize) //사과 점수 배열에서 뒤에서부터 m개씩 가져옮
             answer += tmp.minOf{it}*m //사과 박스 가격 더함
-            boxSize -= m //박스 가격 더함
+            boxSize -= m //박스 개수 줄임
         }
         
         return answer

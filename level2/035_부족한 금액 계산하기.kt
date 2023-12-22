@@ -5,13 +5,10 @@
 
 class Solution {
     fun solution(price: Int, money: Int, count: Int): Long {
-        var answer: Long = -1
         var sum : Long = 0 //총 필요한 놀이기구 이용 금액
         for(i in 1..count){ //놀이기구를 i번째 이용한다면
             sum += price.toLong()*i //i번째 가격을 더함
         }
-        if(money > sum) answer = 0 //금액이 부족하지 않으면 0
-        else answer = sum - money //금액이 부족하면 부족한 금액
-        return answer
+        return if(money > sum) 0 else sum - money
     }
 }

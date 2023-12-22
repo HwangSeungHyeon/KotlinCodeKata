@@ -3,19 +3,5 @@
 // 예를 들어 a = 3, b = 5인 경우, 3 + 4 + 5 = 12이므로 12를 리턴합니다.
 
 class Solution {
-    fun solution(a: Int, b: Int): Long {
-        var sum : Long = 0
-    
-        if(a <= b){
-            for(i in a..b){
-                sum+=i
-            }
-        }
-        else{
-            for(i in a downTo b){
-                sum+=i
-            }
-        }
-        return sum
-    }
+    fun solution(a: Int, b: Int) = if(b>a) (a.toLong()+b)*(b-a+1)/2 else (a.toLong()+b)*(a-b+1)/2
 }

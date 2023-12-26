@@ -16,17 +16,16 @@
 class Solution {
     // n: 1미터 벽의 개수 (1~n)
     // m: 롤러의 길이
-    fun solution(n: Int, m: Int, section: IntArray): Int {      
+    fun solution(n: Int, m: Int, section: IntArray): Int {        
         var answer = 0 //색칠 횟수
-        var endPoint = 0 //가장 마지막에 칠해진 숫자
-        for(i in 1..n){ //1에서 n까지
-            if(section.contains(i)){ //section에 있는 숫자라면
-                if(i > endPoint){
-                    endPoint = i+m-1
-                    answer++
-                }        
+        var endPoint = 0
+        for(s in section){ //section에서 가져온다.
+            if(s > endPoint){ //가장 마지막에 칠해진 위치보다 뒤에 있는 숫자만 가져온다.
+                endPoint = s+m-1
+                answer++ //i에서 i+m까지 칠함
             }
         }
+                
         return answer
     }
 }
